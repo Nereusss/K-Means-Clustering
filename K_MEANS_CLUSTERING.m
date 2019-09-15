@@ -1,5 +1,11 @@
-function [clustering] = K_MEANS_CLUSTERING(X, k, n, num)
-
+function [clustering] = K_MEANS_CLUSTERING(X, k)
+    
+    % Get the dimension of data matrix
+    [num, n] = size(X);
+    
+    % Set default runs to 5
+    run = 5;
+    
     % Initialize the clustering vetor of points
     clustering = zeros(k,1);
     
@@ -42,5 +48,7 @@ function [clustering] = K_MEANS_CLUSTERING(X, k, n, num)
         end
         
     end
+    
+end
     
   
