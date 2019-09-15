@@ -35,8 +35,7 @@ function [clustering] = K_MEANS_CLUSTERING(X, k, n, num)
         
         end
         
-        % Refine the partition vector Y in terms of the mean of certain
-        % data points in the same clustering
+        % Refine the partition vecto
         for i = 1:k
               Y(i, :) = mean(X(clustering == i, :));
         end
